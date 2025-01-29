@@ -66,7 +66,7 @@ class ReviewController {
 		// Sætter limit antal
 		limit = parseInt(limit) || 1000
 		// Sætter attributter (table felter)
-		const attr = attributes ? attributes.split(',') : new Array('id', 'title', 'created_at')
+		const attr = attributes ? attributes.split(',') : new Array('id', 'title', 'created_at', 'comment', 'num_stars')
 
 		// Eksekverer sequelize metode med management values
 		const result = await UserReview.findAll({
